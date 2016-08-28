@@ -11,33 +11,26 @@ import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
- *
  */
 public class MainActivityListFragment extends ListFragment {
 
-
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated(Bundle saveInstanceState){
+        super.onActivityCreated(saveInstanceState);
 
-    String[] values = new String[]{ "Android", "iPhone", "WindowsMobile",
-            "Blackberry", "WebOS", "Ubuntu", "Windows7", "Mac OS X",
-            "Linux", "OS/2" };
+        String[] values = new String[]{"Android", "iPhone", "WindowsMobile", "Blackberry",
+                "WebOS", "Ubuntu", "Windows7", "MAX OS X", "Linux", "OS/2"};
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-            android.R.simple_list_item_1, values );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, values);
 
-    setListAdapter(adapter);
-
+        setListAdapter(adapter);
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
+    public void onListItemClick(ListView l, View v, int position, long id){
         super.onListItemClick(l, v, position, id);
     }
-
-
-
 }
 
 
